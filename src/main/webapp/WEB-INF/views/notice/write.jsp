@@ -6,7 +6,7 @@
 <html>
 <head>
 <title>공지사항 작성</title>
-<%@ include file="/style/page.jsp"%>
+<%@ include file="../style/page.jsp"%>
 <!-- Bootstrap Core CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/animate.css" rel="stylesheet">
@@ -28,7 +28,7 @@
 			alert("내용 입력!!!!");
 			return;
 		} else {
-			document.getElementById("writeform").action = "${root}/notice.do";
+			document.getElementById("writeform").action = "/writesuccess";
 			document.getElementById("writeform").submit();
 		}
 	}
@@ -55,6 +55,6 @@
 			<button type="reset" class="btn btn-primary">초기화</button>
 		</form>
 	</div>
-	<%@ include file="/style/footer.jsp"%>
+	<%@ include file="../style/footer.jsp"%>
 </body>
 </html>

@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<%@ include file="/style/page.jsp"%>
+<%@ include file="../style/page.jsp"%>
 <!-- Bootstrap Core CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/animate.css" rel="stylesheet">
@@ -44,12 +44,12 @@
 				</div>
 				<div class="form-group" align="center">
 					<c:if test="${userinfo != null}">
-						<a href="${root}/notice.do?act=mvmodify&no=${list.no}">게시글 수정</a>
-						<a href="${root}/notice.do?act=delete&no=${list.no}">게시글 삭제</a>
+						<a href="./rewrite?no=${list.no}">게시글 수정</a>
+						<a href="./remove?no=${list.no}">게시글 삭제</a>
 					</c:if>
 				</div>
 			</form>
 		</div>
-<%@ include file="/style/footer.jsp"%>
+<%@ include file="../style/footer.jsp"%>
 </body>
 </html>

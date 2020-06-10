@@ -1,7 +1,7 @@
 package com.ssafy.happyhouse.model.dto;
 
 public class NoticeDto {
-	private int no;
+	private String no;
 	private String id;
 	private String title;
 	private String content;
@@ -9,7 +9,7 @@ public class NoticeDto {
 	
 	public NoticeDto() {};
 	
-	public NoticeDto(int no, String id, String title, String content, String regtime) {
+	public NoticeDto(String no, String id, String title, String content, String regtime) {
 		this.no = no;
 		this.id = id;
 		this.title = title;
@@ -17,10 +17,10 @@ public class NoticeDto {
 		this.regtime = regtime;
 	}
 	
-	public int getNo() {
+	public String getNo() {
 		return no;
 	}
-	public void setNo(int no) {
+	public void setNo(String no) {
 		this.no = no;
 	}
 	public String getId() {

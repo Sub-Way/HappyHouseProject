@@ -24,7 +24,7 @@
 <div align="center">
 <div class="container" align="center">
 	<br><h2>공지사항이 성공적으로 수정되었습니다.</h2>
-	<br><a href="${root}/notice.do?act=list">공지사항목록</a>
+	<br><a href="/notice">공지사항목록</a>
 </div>
 </div>
 <%@ include file="../style/footer.jsp"%>

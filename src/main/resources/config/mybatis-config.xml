@@ -3,6 +3,7 @@
 <configuration>
 	<mappers>
 		<mapper resource="mappers/MemberMapper.xml" />
+		<mapper resource="mappers/NoticeMapper.xml" />
 		<mapper resource="mappers/HouseDealMapper.xml" />
 	</mappers>
 </configuration>

@@ -1,26 +1,33 @@
-<!-- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="oticeMapper">
+<mapper namespace="NoticeMapper">
 
-	<insert id="insert">
-		insert into patient values(#{pno}, #{name}, #{age}, #{ccode})
+	<select id="selectAll" resultType="com.ssafy.happyhouse.model.dto.NoticeDto">
+		select *
+		from ssafydb.notice
+		order by no desc
+	</select>
+	
+	<insert id="write" parameterType="com.ssafy.happyhouse.model.dto.NoticeDto">
+		insert into ssafydb.notice (id, title, content, regtime)
+		values (#{id}, #{title}, #{content}, #{regtime})
 	</insert>
 	
-	<select id="check" resultType="Integer">
-		select count(*) from patient where pno = #{pno} 
-	</select>
-	
-	<select id="select" resultType="com.ssafy.myapp.domain.PatientDto">
-		select pno, name, age, cname
-		from patient p, country c where p.ccode = c.ccode
-	</select>
-	
-	<select id="detail" resultType="com.ssafy.myapp.domain.PatientDto">
-		select pno, name, age, cname
-		from patient p, country c where p.ccode = c.ccode and p.pno = #{pno} 
-	</select>
+   <select id="detail" resultType="com.ssafy.happyhouse.model.dto.NoticeDto">
+       select *
+       from ssafydb.notice
+       where no=#{no}
+   </select>
+   
+   <select id="update" resultType="com.ssafy.happyhouse.model.dto.NoticeDto">
+       select title, content
+       from ssafydb.notice
+       where no=#{no}
+   </select>
 	
 	<delete id="delete">
-		delete from patient where pno = #{pno}
-	</delete>
-</mapper> -->
+        delete from ssafydb.notice
+        where no = #{no} 
+    </delete>
+    
+</mapper>

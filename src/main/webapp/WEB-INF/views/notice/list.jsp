@@ -21,7 +21,7 @@
 </head>
 <script type="text/javascript">
 	function movewrite() {
-		location.href = "${root}/notice.do?act=mvwrite";
+		location.href = "/mvwrite";
 	}
 	function pageMove(pg) { 
 		document.getElementById("pg").value=pg;
@@ -63,8 +63,7 @@
 					<tbody>
 						<tr class="table-info">
 							<td colspan="4"><strong>${lists.no}</strong></td>
-							<td colspan="4"><a
-								href="${root}/notice.do?act=show&no=${lists.no}"><strong>${lists.title}</strong></a></td>
+							<td colspan="4"><a href="./detail?no=${lists.no}"><strong>${lists.title}</strong></a></td>
 							<td colspan="4"><strong>${lists.id}</strong></td>
 							<td colspan="4"><strong>${lists.regtime}</strong></td>
 						</tr>

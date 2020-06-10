@@ -6,8 +6,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>삭제 완료</title>
-<%@ include file="/style/page.jsp"%>
+<title>작성 완료</title>
+<%@ include file="../style/page.jsp"%>
 <!-- Bootstrap Core CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/animate.css" rel="stylesheet">
@@ -24,6 +24,6 @@
 <div align="center">
 	<br><h2>공지사항이 성공적으로 작성되었습니다.</h2>
 </div>
-<%@ include file="/style/footer.jsp"%>
+<%@ include file="../style/footer.jsp"%>
 </body>
 </html>

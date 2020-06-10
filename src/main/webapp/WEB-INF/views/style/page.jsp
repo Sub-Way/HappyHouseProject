@@ -71,12 +71,12 @@
                             <a href="/list">거래검색</a>
                         </li>
                         <li class="dropdown">
-                        	<a href="${root}/notice.do?act=notice&pg=1">공지사항</a>
+                        	<a href="/notice">공지사항</a>
                         </li>
                         <li class="dropdown">
-                        	<a href="${root}/notice/sitemap.jsp">사이트맵</a>
+                        	<a href="/sitemap">사이트맵</a>
                        <li class="dropdown">
-                       		<a href="${root}/user.do?act=mvlogin" style="float:right">로그인을 해주세요!</a>
+                       		<a href="/login" style="float:right">로그인을 해주세요!</a>
                         </li>
                         <li><a href="javascript:void(0);" class="side-menu-trigger hidden-xs"><i class="fa fa-bars"></i></a></li>
                     </ul>
@@ -96,12 +96,12 @@
                             <a href="/list">거래검색</a>
                         </li>
                         <li class="dropdown">
-                        	<a href="${root}/notice.do?act=notice&pg=1">공지사항</a>
+                        	<a href="/notice">공지사항</a>
                         </li>
                         <li class="dropdown">
-                        	<a href="${root}/notice/sitemap.jsp">사이트맵</a>
+                        	<a href="/sitemap">사이트맵</a>
                        <li class="dropdown">
-                       		<a href="${root}/user/info.jsp" style="float:right" >${userinfo.id}(${userinfo.name})님 환영합니다!</a>
+                       		<a href="/info" style="float:right" >${userinfo.id}(${userinfo.name})님 환영합니다!</a>
                         </li>
                         <li><a href="javascript:void(0);" class="side-menu-trigger hidden-xs"><i class="fa fa-bars"></i></a></li>
                     </ul>
