@@ -11,16 +11,16 @@
 <%@ include file="../style/page.jsp"%>
 
 <!-- Bootstrap Core CSS -->
-    <link href="/static/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/static/assets/css/animate.css" rel="stylesheet">
-    <link href="/static/assets/css/plugins.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/animate.css" rel="stylesheet">
+    <link href="/assets/css/plugins.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="/static/assets/css/style.css" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="/static/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="/static/assets/css/pe-icons.css" rel="stylesheet">
+    <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/pe-icons.css" rel="stylesheet">
 <script type="text/javascript">
 	function searchAll() {
 		document.location.href = "/searchAll";
