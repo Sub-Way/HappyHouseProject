@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.happyhouse.mapper.HouseDealMapper">
+	
+	<select id="select" resultType="com.ssafy.happyhouse.model.dto.HouseDeal">
+		select no,dong,AptName,code,dealAmount,buildYear,dealYear,dealMonth,dealDay,area,floor,jibun
+		from housedeal
+		order by no asc
+	</select>
+	
+	<select id="search_apt" resultType="com.ssafy.happyhouse.model.dto.HouseDeal">
+		select no,dong,AptName,code,dealAmount,buildYear,dealYear,dealMonth,dealDay,area,floor,jibun
+		from housedeal
+		where AptName like #{aptName}
+		order by no asc
+	</select>
+	
+	<select id="search_dong" resultType="com.ssafy.happyhouse.model.dto.HouseDeal">
+		select no,dong,AptName,code,dealAmount,buildYear,dealYear,dealMonth,dealDay,area,floor,jibun
+		from housedeal
+		where dong like #{dongName}
+		order by no asc
+	</select>
+	
+</mapper>
