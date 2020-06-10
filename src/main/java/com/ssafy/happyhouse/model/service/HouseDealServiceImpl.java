@@ -24,12 +24,16 @@ public class HouseDealServiceImpl implements HouseDealService{
 
 	@Override
 	public List<HouseDeal> searchAptName(String aptName) throws Exception {
+		aptName = "%"+aptName+"%";
+		System.out.println(aptName);
 		List<HouseDeal> list = dao.searchAptName(aptName);
 		return list;
 	}
 
 	@Override
 	public List<HouseDeal> searchDong(String dongName) throws Exception {
+		dongName = "%"+dongName+"%";
+		System.out.println(dongName);
 		List<HouseDeal> list = dao.searchDong(dongName);
 		return list;
 	}
