@@ -16,21 +16,21 @@ public class HouseDealDaoImpl implements HouseDealDao{
 	
 	@Override
 	public List<HouseDeal> searchAll() throws Exception {
-		List<HouseDeal> list = sqlSession.selectList("com.ssafy.happyhouse.model.mapper.HouseDealMapper.select");
+		List<HouseDeal> list = sqlSession.selectList("HouseDealMapper.select");
 		return list;
 	}
 
 	@Override
 	public List<HouseDeal> searchAptName(String aptName) throws Exception {
 		// TODO Auto-generated method stub
-		List<HouseDeal> list = sqlSession.selectList("com.ssafy.happyhouse.model.mapper.HouseDealMapper.search_apt", aptName);
+		List<HouseDeal> list = sqlSession.selectList("HouseDealMapper.search_apt", aptName);
 		return list;
 	}
 
 	@Override
 	public List<HouseDeal> searchDong(String dongName) throws Exception {
 		// TODO Auto-generated method stub
-		List<HouseDeal> list = sqlSession.selectList("com.ssafy.happyhouse.model.mapper.HouseDealMapper.search_dong", dongName);
+		List<HouseDeal> list = sqlSession.selectList("HouseDealMapper.search_dong", dongName);
 		return list;
 	}
 
