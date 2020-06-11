@@ -22,12 +22,13 @@
     <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="assets/css/pe-icons.css" rel="stylesheet">
 <script type="text/javascript">
+	
 	function searchAll() {
 		document.location.href = "/searchAll";
 	}
 	function search() {
 		if (document.getElementById("word").value == "") {
-			alert("내용 입력 !!!");
+			alert("검색어를 입력하세요.");
 			return;
 		}
 
@@ -48,7 +49,9 @@
 	function checkpoint(aptname) {
 		document.location.href = "/searchAll?aptname=apt";
 	}
+	
 </script>
+<script></script>
 </head>
 
 <body>
@@ -85,7 +88,7 @@
 			
 
 			<c:forEach var="deal" items="${deals}">
-				<table class="table table-active">
+				<table id="tablesort" class="table table-active">
 					<tbody>
 						<tr>
 							<td onclick="document.location.href='/apt.do?act=show&no=${deal.no}&aptname=${deal.aptName}'" style="cursor: pointer;"><strong>${deal.no}</strong></td>

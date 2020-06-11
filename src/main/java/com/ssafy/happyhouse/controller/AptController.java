@@ -52,4 +52,24 @@ public class AptController {
 			model.addAttribute("deals", list);
 			return "apt/searchList";
 		}
+		
+		@RequestMapping(value = "/showDetail", method = RequestMethod.GET)
+		public String detail(Model model, @RequestParam int no) throws Exception {
+			HouseDeal detail = service.show(no);
+			model.addAttribute("detail", detail);
+			return "apt/searchList";
+		}
+		
+		@RequestMapping(value = "/totalCnt", method = RequestMethod.GET)
+		public String totalCnt(Model model, @RequestParam String word, @RequestParam String key) throws Exception {
+			int tmp = service.getTotalCount(key, word);
+			model.addAttribute("totalCnt", tmp);
+			return "apt/searchList";
+		}
+		
+		
+		@RequestMapping(value = "/error", method = RequestMethod.GET)
+		public String error() throws Exception {
+			return "error/error";
+		}
 }
