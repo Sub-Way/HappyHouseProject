@@ -27,7 +27,9 @@
 	
     <delete id="delete">
         delete from ssafydb.user
-        where id = #{id} and 
+        where id = #{id} 
+        and password = #{password}
+
     </delete>
     
     <select id="find" resultType="com.ssafy.happyhouse.model.dto.MemberDto">
