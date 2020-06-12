@@ -19,6 +19,11 @@ public class MemberServiceImpl implements MemberService{
 		return dao.login(dto);
 	}
 
+	public int loginCheck(MemberDto dto) {
+		int successCnt = dao.loginCheck(dto);
+		return successCnt;
+	}
+	
 	@Override
 	public int join(MemberDto dto) {
 		int successCnt = dao.join(dto);

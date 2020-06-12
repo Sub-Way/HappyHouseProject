@@ -19,6 +19,12 @@ public class MemberRepoImpl implements MemberRepo{
 	public MemberDto login(MemberDto dto) {
 		return sqlSession.selectOne("MemberMapper.login", dto);
 	}
+	
+	@Override
+	public int loginCheck(MemberDto dto) {
+		int successCnt = sqlSession.selectOne("MemberMapper.loginCheck", dto);
+		return successCnt;
+	}
 
 	@Override
 	public int join(MemberDto dto) {
@@ -40,4 +46,5 @@ public class MemberRepoImpl implements MemberRepo{
 	public MemberDto find(MemberDto dto) {
 		return sqlSession.selectOne("MemberMapper.find",dto);
 	}
+
 }

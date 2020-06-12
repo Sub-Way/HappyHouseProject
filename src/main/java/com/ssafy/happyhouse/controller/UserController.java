@@ -34,8 +34,16 @@ public class UserController {
 
 	@RequestMapping(value = "/home", method = RequestMethod.POST)
 	public String login(@ModelAttribute MemberDto dto, HttpSession session) {
-		session.setAttribute("userinfo", service.login(dto));
-		return "index";// jsp 호출
+		int loginCnt = service.loginCheck(dto);
+		System.out.println(loginCnt);
+		if(loginCnt > 0) {
+			session.setAttribute("userinfo", service.login(dto));
+			return "index";
+		}
+		else {
+			session.setAttribute("msg", "아이디 또는 비밀번호를 확인해주세요!");
+			return "user/login";// jsp 호출
+		}
 	}
 
 	@RequestMapping(value = "/logout", method = RequestMethod.GET)

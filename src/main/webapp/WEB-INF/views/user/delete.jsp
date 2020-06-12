@@ -35,8 +35,16 @@ $(document).ready(function(){
 			<br>
 			<input type="hidden" name="id" id="id" value="${userinfo.id}">
 			<h2>정말로 삭제하시겠습니까?</h2>
+			<div class="container" style="width: 150px;">
+				<section id="index_section">
+			<div class="card col-sm-12 mt-1" style="min-height: 100px;">
+				<div class="card-body">
 			<div class="form-group" align="center">
 				<button type="button" id="join_btn" class="btn btn-primary btn-block">삭제하기</button>
+			</div>
+			</div>
+			</div>
+			</section>
 			</div>
 		</form>
 </div>

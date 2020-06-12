@@ -9,6 +9,13 @@
 		and password = #{password}
 	</select>
 	
+	<select id="loginCheck" parameterType="com.ssafy.happyhouse.model.dto.MemberDto" resultType="int">
+		select count(*) cnt
+		from ssafydb.user
+		where id = #{id}
+		and password = #{password}
+	</select>
+	
 	<insert id="join" parameterType="com.ssafy.happyhouse.model.dto.MemberDto">
 		insert into ssafydb.user (id, password, name, addr, phone)
 		values (#{id}, #{password}, #{name}, #{addr}, #{phone})
@@ -27,9 +34,7 @@
 	
     <delete id="delete">
         delete from ssafydb.user
-        where id = #{id} 
-        and password = #{password}
-
+        where id = #{id} and 
     </delete>
     
     <select id="find" resultType="com.ssafy.happyhouse.model.dto.MemberDto">
