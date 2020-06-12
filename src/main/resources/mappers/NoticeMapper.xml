@@ -10,7 +10,7 @@
 	
 	<insert id="write" parameterType="com.ssafy.happyhouse.model.dto.NoticeDto">
 		insert into ssafydb.notice (id, title, content, regtime)
-		values (#{id}, #{title}, #{content}, #{regtime})
+		values (#{id}, #{title}, #{content}, now())
 	</insert>
 	
    <select id="detail" resultType="com.ssafy.happyhouse.model.dto.NoticeDto">
