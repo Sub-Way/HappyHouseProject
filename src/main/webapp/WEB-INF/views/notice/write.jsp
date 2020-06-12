@@ -28,6 +28,7 @@
 			alert("내용 입력!!!!");
 			return;
 		} else {
+			alert("공지사항이 성공적으로 입력되었습니다.");
 			document.getElementById("writeform").action = "/writesuccess";
 			document.getElementById("writeform").submit();
 		}

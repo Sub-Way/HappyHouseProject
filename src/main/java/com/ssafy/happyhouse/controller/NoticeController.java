@@ -40,9 +40,10 @@ public class NoticeController {
 	}
 	
 	@RequestMapping(value = "/writesuccess")
-	public String writesuccess(@ModelAttribute NoticeDto dto) {
+	public String writesuccess(@ModelAttribute NoticeDto dto, Model m) {
 		service.write(dto);
-		return "notice/writesuccess";
+		m.addAttribute("list", service.findAll());
+		return "notice/list";
 	}
 	
 	@RequestMapping(value = "/detail", method = RequestMethod.GET)
