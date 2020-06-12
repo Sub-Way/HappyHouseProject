@@ -35,7 +35,7 @@ public class AptController {
 		public String allList(Model model) throws Exception {
 			List<HouseDeal> list = service.searchAll();
 			model.addAttribute("deals", list);
-			return "apt/searchList";//jsp 호출
+			return "apt/search";//jsp 호출
 		}
 		
 		@RequestMapping(value = "/searchAptName", method = RequestMethod.GET)
@@ -43,13 +43,33 @@ public class AptController {
 			System.out.println(word+" -> 아파트 이름");
 			List<HouseDeal> list = service.searchAptName(word);
 			model.addAttribute("deals", list);
-			return "apt/searchList";//jsp 호출
+			return "apt/search";//jsp 호출
 		}
 		
 		@RequestMapping(value = "/searchDong", method = RequestMethod.GET)
 		public String dongList(Model model,@RequestParam String word) throws Exception {
 			List<HouseDeal> list = service.searchDong(word);
 			model.addAttribute("deals", list);
-			return "apt/searchList";
+			return "apt/search";
+		}
+		
+		@RequestMapping(value = "/showDetail", method = RequestMethod.GET)
+		public String detail(Model model, @RequestParam int no) throws Exception {
+			HouseDeal detail = service.show(no);
+			model.addAttribute("detail", detail);
+			return "apt/search";
+		}
+		
+		@RequestMapping(value = "/totalCnt", method = RequestMethod.GET)
+		public String totalCnt(Model model, @RequestParam String word, @RequestParam String key) throws Exception {
+			int tmp = service.getTotalCount(key, word);
+			model.addAttribute("totalCnt", tmp);
+			return "apt/search";
+		}
+		
+		
+		@RequestMapping(value = "/error", method = RequestMethod.GET)
+		public String error() throws Exception {
+			return "error/error";
 		}
 }

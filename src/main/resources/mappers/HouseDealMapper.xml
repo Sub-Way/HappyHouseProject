@@ -3,12 +3,14 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="HouseDealMapper">
 	
+	<!-- 아파트 전체 조회 -->
 	<select id="select" resultType="com.ssafy.happyhouse.model.dto.HouseDeal">
 		select no,dong,AptName,code,dealAmount,buildYear,dealYear,dealMonth,dealDay,area,floor,jibun
 		from housedeal
 		order by no asc
 	</select>
 	
+	<!-- 아파트 이름으로 찾기 -->
 	<select id="search_apt" resultType="com.ssafy.happyhouse.model.dto.HouseDeal">
 		select no,dong,AptName,code,dealAmount,buildYear,dealYear,dealMonth,dealDay,area,floor,jibun
 		from housedeal
@@ -16,11 +18,35 @@
 		order by no asc
 	</select>
 	
+	<!-- 동으로 찾기 -->
 	<select id="search_dong" resultType="com.ssafy.happyhouse.model.dto.HouseDeal">
 		select no,dong,AptName,code,dealAmount,buildYear,dealYear,dealMonth,dealDay,area,floor,jibun
 		from housedeal
 		where dong like #{dongName}
 		order by no asc
+	</select>
+	
+	<!-- 상세보기 -->
+	<select id="show" resultType="com.ssafy.happyhouse.model.dto.HouseDeal">
+		select no,dong,AptName,code,dealAmount,buildYear,dealYear,dealMonth,dealDay,area,floor,jibun
+		from housedeal
+		where no like #{no}
+		order by no asc
+	</select>
+	
+	
+	<!-- 아파트 검색 개수  -->
+	<select id="AptTotalCnt" resultType="com.ssafy.happyhouse.model.dto.HouseDeal">
+		select count(*)
+		from housedeal
+		where AptName like #{word}
+	</select>
+	
+	<!-- 동 검색 개수  -->
+	<select id="DongTotalCnt" resultType="com.ssafy.happyhouse.model.dto.HouseDeal">
+		select count(*)
+		from housedeal
+		where dong like #{word}
 	</select>
 	
 </mapper>

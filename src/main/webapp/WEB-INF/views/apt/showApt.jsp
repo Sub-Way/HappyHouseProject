@@ -7,6 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <%@ include file="../style/page.jsp"%>
+
 <title>거래 상세정보 조회</title>
 
 <!-- Bootstrap Core CSS -->

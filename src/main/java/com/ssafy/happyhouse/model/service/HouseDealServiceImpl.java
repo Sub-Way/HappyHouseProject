@@ -38,22 +38,23 @@ public class HouseDealServiceImpl implements HouseDealService{
 		return list;
 	}
 
-//	@Override
-//	public HouseDeal show(int no) throws Exception {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
-//
-//	@Override
-//	public int getTotalCount(String key, String word) throws Exception {
-//		// TODO Auto-generated method stub
-//		return 0;
-//	}
-//
+	@Override
+	public HouseDeal show(int no) throws Exception {
+		HouseDeal tmp = dao.show(no);
+		return tmp;
+	}
+
+	@Override
+	public int getTotalCount(String key, String word) throws Exception {
+		word = "%"+word+"%";
+		int tmp = dao.getTotalCount(key, word);
+		return tmp;
+	}
+
 //	@Override
 //	public String[] location(String aptname) throws Exception {
 //		// TODO Auto-generated method stub
 //		return null;
 //	}
-//	
+	
 }

@@ -34,18 +34,21 @@ public class HouseDealDaoImpl implements HouseDealDao{
 		return list;
 	}
 
-//	@Override
-//	public HouseDeal show(int no) throws Exception {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
-//
-//	@Override
-//	public int getTotalCount(String key, String word) throws Exception {
-//		// TODO Auto-generated method stub
-//		return 0;
-//	}
-//
+	@Override
+	public HouseDeal show(int no) throws Exception {
+		// TODO Auto-generated method stub
+		HouseDeal tmp = sqlSession.selectOne("HouseDealMapper.show", no);
+		return tmp;
+	}
+
+	@Override
+	public int getTotalCount(String key, String word) throws Exception {
+		int totalCnt = 0;
+		if(key == "aptname") totalCnt = sqlSession.selectOne("HouseDealMapper.AptTotalCnt", word);
+		else totalCnt = sqlSession.selectOne("HouseDealMapper.DongTotalCnt", word);
+		return totalCnt;
+	}
+
 //	@Override
 //	public String[] location(String aptname) throws Exception {
 //		// TODO Auto-generated method stub

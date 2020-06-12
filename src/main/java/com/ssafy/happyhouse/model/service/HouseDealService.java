@@ -14,9 +14,9 @@ public interface HouseDealService {
 	
 	public List<HouseDeal> searchDong(String dongName) throws Exception;
 	
-//	public HouseDeal show(int no) throws Exception;
-//	
-//	public int getTotalCount(String key, String word) throws Exception;
-//	
+	public HouseDeal show(int no) throws Exception;
+	
+	public int getTotalCount(String key, String word) throws Exception;
+	
 //	public String []  location (String aptname) throws Exception;
 }
