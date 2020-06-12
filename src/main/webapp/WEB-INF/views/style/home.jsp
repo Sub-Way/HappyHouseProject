@@ -124,34 +124,6 @@
             </div>
             <!-- /.container-fluid -->
         </nav>
-		<!-- login modal start -->
-		<div class="modal" id="loginModal">
-			<div class="modal-dialog modal-md" style="vertical-align: middle;">
-				<div class="modal-content" style="z-index: 1001;">
-					<!-- ModalHeader -->
-					<div class="modal-header">
-						<h4 class="modal-title">LogIn</h4>
-						<button type="button" class="close dataDismiss" data-dismiss="modal">&times;</button>
-					</div>
-					<!-- Modal body -->
-					<div class="modal-body">
-						<div class="form-group">
-							<label for="mbr_id">ID:</label>
-							<input type="text" id="mbr_id" class="form-control" placeholder="Enter ID">
-						</div>
-						<div class="form-group">
-							<label for="mbr_pwd">Password:</label>
-							<input type="password" id="mbr_pwd" class="form-control" placeholder="Enter Password">
-						</div>
-					</div>
-					<!-- Modal footer -->
-					<div class="modal-footer">
-						<button type="button" id="modalLogInBtn" class="btn btn-primary" data-dismiss="modal">LogIn</button>
-						<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-					</div>
-				</div>
-			</div>
-		</div>
 		
         <!-- Header -->
         <header id="headerwrap" class="dark-wrapper backstretched special-max-height no-overlay">

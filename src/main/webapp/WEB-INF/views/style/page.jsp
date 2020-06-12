@@ -15,6 +15,19 @@
     <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/ico/apple-touch-icon-114x114.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/ico/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" href="/assets/img/ico/apple-touch-icon-57x57.png">
+    
+    <!-- Bootstrap Core CSS -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/animate.css" rel="stylesheet">
+    <link href="/assets/css/plugins.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/assets/css/style.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/pe-icons.css" rel="stylesheet">
+    
 </head>
 <body>
     <div class="master-wrapper">
@@ -112,40 +125,13 @@
             </div>
             <!-- /.container-fluid -->
         </nav>
-		<!-- login modal start -->
-		<div class="modal" id="loginModal">
-			<div class="modal-dialog modal-md" style="vertical-align: middle;">
-				<div class="modal-content" style="z-index: 1001;">
-					<!-- ModalHeader -->
-					<div class="modal-header">
-						<h4 class="modal-title">LogIn</h4>
-						<button type="button" class="close dataDismiss" data-dismiss="modal">&times;</button>
-					</div>
-					<!-- Modal body -->
-					<div class="modal-body">
-						<div class="form-group">
-							<label for="mbr_id">ID:</label>
-							<input type="text" id="mbr_id" class="form-control" placeholder="Enter ID">
-						</div>
-						<div class="form-group">
-							<label for="mbr_pwd">Password:</label>
-							<input type="password" id="mbr_pwd" class="form-control" placeholder="Enter Password">
-						</div>
-					</div>
-					<!-- Modal footer -->
-					<div class="modal-footer">
-						<button type="button" id="modalLogInBtn" class="btn btn-primary" data-dismiss="modal">LogIn</button>
-						<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-					</div>
-				</div>
-			</div>
-		</div>
-        <!-- Header -->
+		
+         <!-- Header -->
         <header id="headerwrap" class="dark-wrapper backstretched special-max-height no-overlay">
             <div class="container vertical-center">
                 <div class="intro-text vertical-center text-left smoothie">
                     <div class="intro-heading wow fadeIn heading-font" data-wow-delay="0.2s">Happy House</div>
-                    <div class="intro-sub-heading wow fadeIn secondary-font" data-wow-delay="0.4s"> SSAFY 3기 임진섭, 진소라</div>
+                    <div class="intro-sub-heading wow fadeIn secondary-font" data-wow-delay="0.4s"> SSAFY 3기 임진섭, 진소라의<span class="rotate"> 노력, 결실, 작품</span></div>
                 </div>
             </div>
         </header>
@@ -232,7 +218,7 @@
     <script src="/assets/js/jquery.js"></script>
     <script src="/assets/js/bootstrap.min.js"></script>
     <script src="/assets/js/plugins.js"></script>
-<!--     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script> -->
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <script src="/assets/js/init.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->

@@ -1,19 +1,15 @@
 package com.ssafy.happyhouse.controller;
 
-import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import com.ssafy.happyhouse.model.dto.MemberDto;
-import com.ssafy.happyhouse.model.dto.NoticeDto;
 import com.ssafy.happyhouse.model.service.MemberService;
 
 @Controller
@@ -35,7 +31,6 @@ public class UserController {
 	@RequestMapping(value = "/home", method = RequestMethod.POST)
 	public String login(@ModelAttribute MemberDto dto, HttpSession session) {
 		int loginCnt = service.loginCheck(dto);
-		System.out.println(loginCnt);
 		if(loginCnt > 0) {
 			session.setAttribute("userinfo", service.login(dto));
 			return "index";
