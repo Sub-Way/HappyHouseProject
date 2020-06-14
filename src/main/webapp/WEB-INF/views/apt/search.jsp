@@ -76,11 +76,11 @@
 			<table class="table table-borderless">
 				<tr>
 					<td align="center">
-							<a href="/pagemv?key=${pagedto.key }&word=${pagedto.word }&reqPageNo=${pagedto.reqPageNo-1}">이전</a>
+							<a href="/pagemv?key=${pagedto.key }&word=${pagedto.word }&reqPageNo=${pagedto.reqPageNo-1}">◀이전</a>
 						<c:forEach var="pageNo" begin="${startPage }" end="${lastPage}" step="1" >
 							<a href="/pagemv?key=${pagedto.key }&word=${pagedto.word }&reqPageNo=${pageNo }">${pageNo}</a>
 						</c:forEach>
-							<a href="/pagemv?key=${pagedto.key }&word=${pagedto.word }&reqPageNo=${pagedto.reqPageNo+1}">다음</a>
+							<a href="/pagemv?key=${pagedto.key }&word=${pagedto.word }&reqPageNo=${pagedto.reqPageNo+1}">다음▶</a>
 					</td>
 				</tr>
 			</table>

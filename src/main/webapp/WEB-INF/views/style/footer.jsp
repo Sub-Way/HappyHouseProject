@@ -50,18 +50,18 @@
                                 <div class="widget">
                                     <h4 class="widget-title">Popular Tags</h4>
                                     <div class="tagcloud">
-                                       	<a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">사직동</a>
-				                        <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">숭인동</a>
-				                        <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">창신동</a>
-				                        <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">평동</a>
-				                        <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">홍파동</a>
-				                        <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">견지동</a>
-				                        <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">인의동</a>
-				                        <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">명륜1가</a>
-				                        <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">명륜2가</a>
-				                        <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">무악동</a>
-				                        <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">옥인동</a>
-				                        <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">신영동</a>
+                                       	<a href="/pagemv?key=dongname&word=사직동&reqPageNo=0" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">사직동</a>
+				                        <a href="/pagemv?key=dongname&word=숭인동&reqPageNo=0" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">숭인동</a>
+				                        <a href="/pagemv?key=dongname&word=창신동&reqPageNo=0" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">창신동</a>
+				                        <a href="/pagemv?key=dongname&word=평동&reqPageNo=0" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">평동</a>
+				                        <a href="/pagemv?key=dongname&word=홍파동&reqPageNo=0" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">홍파동</a>
+				                        <a href="/pagemv?key=dongname&word=견지동&reqPageNo=0" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">견지동</a>
+				                        <a href="/pagemv?key=dongname&word=인의동&reqPageNo=0" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">인의동</a>
+				                        <a href="/pagemv?key=dongname&word=명륜1가&reqPageNo=0" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">명륜1가</a>
+				                        <a href="/pagemv?key=dongname&word=명륜2가&reqPageNo=0" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">명륜2가</a>
+				                        <a href="/pagemv?key=dongname&word=무악동&reqPageNo=0" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">무악동</a>
+				                        <a href="/pagemv?key=dongname&word=옥인동&reqPageNo=0" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">옥인동</a>
+				                        <a href="/pagemv?key=dongname&word=신영동&reqPageNo=0" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">신영동</a>
                                     </div>
                                 </div>
                             </div>
