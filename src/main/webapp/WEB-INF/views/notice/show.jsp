@@ -36,6 +36,7 @@
 						<a href="./rewrite?no=${list.no}">게시글 수정</a>
 						<a href="./remove?no=${list.no}">게시글 삭제</a>
 					</c:if>
+					<a href="./notice">목록으로</a>
 				</div>
 			</form>
 		</div>

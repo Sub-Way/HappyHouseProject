@@ -45,5 +45,10 @@ public class NoticeServiceImpl implements NoticeService{
 //		return null;
 //	}
 //	
+
+	@Override
+	public void hits(NoticeDto dto) {
+		dao.hits(dto);
+	}
 	
 }

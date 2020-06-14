@@ -38,4 +38,9 @@ public class NoticeDaoImpl implements NoticeDao {
 	public void remove(String no) {
 		sqlSession.delete("NoticeMapper.delete", no);
 	}
+
+	@Override
+	public void hits(NoticeDto dto) {
+		sqlSession.update("NoticeMapper.hits", dto);
+	}
 }

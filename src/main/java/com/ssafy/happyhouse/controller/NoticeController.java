@@ -1,7 +1,5 @@
 package com.ssafy.happyhouse.controller;
 
-import java.util.List;
-
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,9 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.ssafy.happyhouse.model.dto.MemberDto;
 import com.ssafy.happyhouse.model.dto.NoticeDto;
-import com.ssafy.happyhouse.model.service.MemberService;
 import com.ssafy.happyhouse.model.service.NoticeService;
 
 @Controller
@@ -49,18 +45,23 @@ public class NoticeController {
 	@RequestMapping(value = "/detail", method = RequestMethod.GET)
 	public String detail(Model m, @RequestParam String no) {
 		NoticeDto dto = service.detail(no);
+		
+		dto.setHit(dto.getHit()+1);
+		service.hits(dto);
+		
 		m.addAttribute("list", dto);
 		return "notice/show";
 	}
 	
 	@RequestMapping(value = "/rewrite", method = RequestMethod.GET)
 	public String rewrite(Model m, @RequestParam String no) {
+		NoticeDto dto = service.detail(no);
+		m.addAttribute("list", dto);
 		return "notice/rewrite";
 	}
 	
 	@RequestMapping(value = "/rewritesuccess", method = RequestMethod.POST)
 	public String rewritesuccess(NoticeDto dto, @RequestParam String no) {
-		System.out.println(dto.getNo());
 		service.modify(dto);
 		return "notice/rewritesuccess";
 	}

@@ -6,6 +6,7 @@ public class NoticeDto {
 	private String title;
 	private String content;
 	private String regtime;
+	private int hit;
 	
 	public NoticeDto() {};
 	
@@ -41,15 +42,25 @@ public class NoticeDto {
 	public String getContent() {
 		return content;
 	}
+	
 	public void setContent(String content) {
 		this.content = content;
 	}
+	
 	public String getRegtime() {
 		return regtime;
 	}
+	
 	public void setRegtime(String regtime) {
 		this.regtime = regtime;
 	}
-	
-	
+
+	public int getHit() {
+		return hit;
+	}
+
+	public void setHit(int hit) {
+		this.hit = hit;
+	}
+
 }

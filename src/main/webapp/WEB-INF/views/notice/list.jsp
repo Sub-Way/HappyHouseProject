@@ -41,20 +41,22 @@
 		<table class="table table-active">
 			<tbody>
 				<tr class="table-info">
-					<td colspan="4"><strong>글번호</strong></td>
-					<td colspan="4"><strong>제목</strong></td>
-					<td colspan="4"><strong>작성자</strong></td>
-					<td colspan="4"><strong>작성일</strong></td>
+					<td colspan="5"><strong>글번호</strong></td>
+					<td colspan="5"><strong>제목</strong></td>
+					<td colspan="5"><strong>작성자</strong></td>
+					<td colspan="5"><strong>작성일</strong></td>
+					<td colspan="5"><strong>조회수</strong></td>
 				</tr>
 			</tbody>
 			<c:if test="${list.size() != 0}">
 				<c:forEach var="lists" items="${list}">
 					<tbody>
 						<tr class="table-info">
-							<td colspan="4"><strong>${lists.no}</strong></td>
-							<td colspan="4"><a href="./detail?no=${lists.no}"><strong>${lists.title}</strong></a></td>
-							<td colspan="4"><strong>${lists.id}</strong></td>
-							<td colspan="4"><strong>${lists.regtime}</strong></td>
+							<td colspan="5"><strong>${lists.no}</strong></td>
+							<td colspan="5"><a href="./detail?no=${lists.no}"><strong>${lists.title}</strong></a></td>
+							<td colspan="5"><strong>${lists.id}</strong></td>
+							<td colspan="5"><strong>${lists.regtime}</strong></td>
+							<td colspan="5"><strong>${lists.hit }</strong></td>
 						</tr>
 					</tbody>
 				</c:forEach>
