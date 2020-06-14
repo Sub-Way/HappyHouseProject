@@ -15,23 +15,45 @@ public class HouseDealDaoImpl implements HouseDealDao{
 	SqlSession sqlSession;
 	
 	@Override
-	public List<HouseDeal> searchAll() throws Exception {
-		List<HouseDeal> list = sqlSession.selectList("HouseDealMapper.select");
-		return list;
+	public List<HouseDeal> searchAll(PageDTO pg) throws Exception {
+		System.out.println("찾을 주소 check : "+ pg.getStartNo());
+		List<HouseDeal> tmp = sqlSession.selectList("HouseDealMapper.selectAllPage", pg);
+		return tmp;
+	}
+	
+	@Override
+	public List<HouseDeal> searchAptName(PageDTO pg) throws Exception {
+		// TODO Auto-generated method stub
+		List<HouseDeal> tmp = sqlSession.selectList("HouseDealMapper.selectAptpage", pg);
+		return tmp;
 	}
 
 	@Override
-	public List<HouseDeal> searchAptName(String aptName) throws Exception {
+	public List<HouseDeal> searchDong(PageDTO pg) throws Exception {
 		// TODO Auto-generated method stub
-		List<HouseDeal> list = sqlSession.selectList("HouseDealMapper.search_apt", aptName);
-		return list;
+		List<HouseDeal> tmp = sqlSession.selectList("HouseDealMapper.selectDongPage", pg);
+		return tmp;
+	}
+
+
+	@Override
+	public int TotalCnt() throws Exception {
+		//int totalCnt = sqlSession.selectOne("HouseDealMapper.TotalCnt");
+		int tmp = sqlSession.selectOne("HouseDealMapper.TotalCnt");
+		System.out.println("total count 확인 : "+ tmp);
+		return tmp;
 	}
 
 	@Override
-	public List<HouseDeal> searchDong(String dongName) throws Exception {
-		// TODO Auto-generated method stub
-		List<HouseDeal> list = sqlSession.selectList("HouseDealMapper.search_dong", dongName);
-		return list;
+	public int AptTotalCnt(String word) throws Exception {
+		int totalCnt = sqlSession.selectOne("HouseDealMapper.AptTotalCnt", word);
+		return totalCnt;
+	}
+
+	@Override
+	public int DongTotalCnt(String word) throws Exception {
+		int totalCnt = sqlSession.selectOne("HouseDealMapper.DongTotalCnt", word);
+		return totalCnt;
 	}
 
 	@Override
@@ -40,19 +62,4 @@ public class HouseDealDaoImpl implements HouseDealDao{
 		HouseDeal tmp = sqlSession.selectOne("HouseDealMapper.show", no);
 		return tmp;
 	}
-
-	@Override
-	public int getTotalCount(String key, String word) throws Exception {
-		int totalCnt = 0;
-		if(key == "aptname") totalCnt = sqlSession.selectOne("HouseDealMapper.AptTotalCnt", word);
-		else totalCnt = sqlSession.selectOne("HouseDealMapper.DongTotalCnt", word);
-		return totalCnt;
-	}
-
-//	@Override
-//	public String[] location(String aptname) throws Exception {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
-//	
 }

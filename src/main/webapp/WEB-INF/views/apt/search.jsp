@@ -13,29 +13,16 @@
 		document.location.href = "/searchAll";
 	}
 	
-	function search() {
-		if (document.getElementById("word").value == "") {
-			alert("검색어를 입력하세요.");
-			return;
-		}
-
+	function send(searchform){
 		var sel = document.getElementById("key");
-		var tmp = document.getElementById("word");
-		if (sel.options[sel.selectedIndex].value == "aptname") {
-			document.location.href = "/searchAptName?word="+tmp.value;
-		} else if (sel.options[sel.selectedIndex].value == "dongname") {
-			document.location.href = "/searchDong?word="+tmp.value;
-		}
+		var selstr = sel.options[sel.selectedIndex].value;
+		
+		searchform.key.value = selstr;
+		searchform.word.value = document.getElementById("word").value;
+		
+		searchform.submit();
 	}
 	
-	function pageMove(pg) { 
-		document.getElementById("pg").value=pg;
-		document.location.href = "/searchAll?pg=" + pg;
-	}
-	
-	function checkpoint(aptname) {
-		document.location.href = "/searchAll?aptname=apt";
-	}
 </script>
 </head>
 
@@ -50,17 +37,18 @@
 		</section>
 		<section id="index_section">
 				<div class="card-body" style="float: center;">
-					<form id="searchform" method="get" class="form-inline" action="">
+					<form id="searchform" method="get" class="form-inline" action="/search">
 						<table class="table table-borderless">
 							<tr>
 								<td align="center">
-								<button type="button" class="btn btn-dark" onclick="javascript:searchAll();">전체 조회</button> 
+								<button type="button" class="btn btn-dark" onclick="javascript:send(searchform);">전체 조회</button> 
 									<select class="selectpicker" style="height:28px" data-width="100px" name="key" id="key">
 										<option value="aptname" selected="selected">아파트 이름</option>
 										<option value="dongname">동 이름</option>
 									</select> 
 									<input type="text" class="form-control-sm" style="height:28px" placeholder="검색어 입력" name="word" id="word">
-									<button type="button" class="btn btn-dark" onclick="javascript:search();">검색</button>
+									<button type="button" class="btn btn-dark" onclick="javascript:send(searchform);">검색</button>
+									<input type="hidden" id="reqPageNo" name="reqPageNo" value="0">
 								</td>
 							</tr>
 						</table>
@@ -85,10 +73,15 @@
 						</tbody>
 					</table>
 			</c:forEach>
-			
-			<table>
+			<table class="table table-borderless">
 				<tr>
-					<td>${navigation.navigator}</td>
+					<td align="center">
+							<a href="/pagemv?key=${pagedto.key }&word=${pagedto.word }&reqPageNo=${pagedto.reqPageNo-1}">이전</a>
+						<c:forEach var="pageNo" begin="${startPage }" end="${lastPage}" step="1" >
+							<a href="/pagemv?key=${pagedto.key }&word=${pagedto.word }&reqPageNo=${pageNo }">${pageNo}</a>
+						</c:forEach>
+							<a href="/pagemv?key=${pagedto.key }&word=${pagedto.word }&reqPageNo=${pagedto.reqPageNo+1}">다음</a>
+					</td>
 				</tr>
 			</table>
 		</section>
