@@ -6,7 +6,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>삭제 완료</title>
+<title>삭제 페이지</title>
+<%@ include file="../style/page.jsp"%>
 </head>
 <body>
 <script>
