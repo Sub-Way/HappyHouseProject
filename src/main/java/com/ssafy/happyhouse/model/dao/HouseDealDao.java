@@ -17,8 +17,6 @@ public interface HouseDealDao {
 	
 	public HouseDeal show(int no) throws Exception;
 	
-	public HouseDeal location(String word) throws Exception; // 위치 추가
-	
 	public int TotalCnt() throws Exception;
 	
 	public int AptTotalCnt(String word) throws Exception;

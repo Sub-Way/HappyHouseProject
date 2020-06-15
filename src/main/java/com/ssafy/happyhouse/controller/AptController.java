@@ -127,11 +127,11 @@ public class AptController {
 		public String detail(Model model, @RequestParam int no) throws Exception {
 			HouseDeal detail = service.show(no);
 			
-			HouseDeal locationTmp = service.location(detail.getAptName());
-			if(locationTmp.getLng() != null && locationTmp.getLat() != null) {
-				detail.setLat(locationTmp.getLat());
-				detail.setLng(locationTmp.getLng());
-			}
+//			HouseDeal locationTmp = service.location(detail.getAptName());
+//			if(locationTmp.getLng() != null && locationTmp.getLat() != null) {
+//				detail.setLat(locationTmp.getLat());
+//				detail.setLng(locationTmp.getLng());
+//			}
 			model.addAttribute("deal", detail);
 			return "apt/showApt";
 		}

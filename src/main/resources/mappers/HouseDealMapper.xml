@@ -5,16 +5,9 @@
 	
 	<!-- 상세보기 -->
 	<select id="show" resultType="com.ssafy.happyhouse.model.dto.HouseDeal">
-		select no,dong,AptName,code,dealAmount,buildYear,dealYear,dealMonth,dealDay,area,floor,jibun
-		from housedeal
+		select no,dong,AptName,code,dealAmount,buildYear,dealYear,dealMonth,dealDay,area,floor,jibun,lat,lng
+		from housedeal_lat_lng
 		where no like #{no}
-	</select>
-	
-	<!-- 위도, 경도 추가하기 -->
-	<select id="location" resultType="com.ssafy.happyhouse.model.dto.HouseDeal">
-		select lat, lng
-		from houseinfo
-		where AptName like #{word}
 	</select>
 	
 	<!-- 아파트 전체 개수  -->
