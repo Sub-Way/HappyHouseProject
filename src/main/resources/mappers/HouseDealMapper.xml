@@ -63,4 +63,18 @@
        where no=#{no}
     </update>
 	
+	<select id="topDong" resultType="com.ssafy.happyhouse.model.dto.HouseDeal">
+		select dong
+		from housedeal_lat_lng
+		where hit != 0
+		group by dong
+		order by count(hit) desc limit 12;
+	</select>
+	
+	<select id="topApt" resultType="com.ssafy.happyhouse.model.dto.HouseDeal">
+		select distinct aptName, buildYear
+		from housedeal_lat_lng
+		order by hit desc limit 5;
+	</select>
+	
 </mapper>

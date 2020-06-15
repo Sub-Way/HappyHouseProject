@@ -25,4 +25,7 @@ public interface HouseDealDao {
 	
 	public void hits(HouseDeal dto); //조회수 업데이트
 	
+	public List<HouseDeal> topApt();
+	
+	public List<HouseDeal> topDong();
 }
