@@ -37,7 +37,7 @@
 		</section>
 		<section id="index_section">
 				<div class="card-body" style="float: center;">
-					<form id="searchform" method="get" class="form-inline" action="/search">
+					<form id="searchform" method="get" class="form-inline" action="${root}/search">
 						<table class="table table-borderless">
 							<tr>
 								<td align="center">
@@ -60,7 +60,7 @@
 						<tbody>
 							<tr>
 								<td ><strong>${deal.no}</strong></td>
-								<td colspan="3" onclick="document.location.href='/showDetail?no=${deal.no}'" style="cursor: pointer;">${deal.aptName}</td>
+								<td colspan="3" onclick="document.location.href='${root}/showDetail?no=${deal.no}'" style="cursor: pointer;">${deal.aptName}</td>
 							</tr>
 							<tr class="table-info">
 								<td colspan="1">${deal.dong}</td>

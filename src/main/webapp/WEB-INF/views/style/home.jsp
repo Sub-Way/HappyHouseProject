@@ -111,6 +111,9 @@
                         	<a href="${root}/notice">공지사항</a>
                         </li>
                         <li class="dropdown">
+                        	<a href="${root}/qna">질문하기</a>
+                        </li>
+                        <li class="dropdown">
                         	<a href="${root}/sitemap">사이트맵</a>
                        <li class="dropdown">
                        		<a href="${root}/info" style="float:right" >${userinfo.id}(${userinfo.name})님 환영합니다!</a>

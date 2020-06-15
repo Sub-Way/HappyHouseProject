@@ -72,4 +72,9 @@ public class NoticeController {
 		return "notice/deletesuccess";
 	}
 	
+	@RequestMapping(value = "/qna")
+	public String qna() {
+		return "notice/qna";
+	}
+	
 }
