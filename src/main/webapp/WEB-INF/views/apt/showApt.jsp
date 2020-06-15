@@ -12,7 +12,9 @@
 
 <body>
 	<br><br>
-	<div id="map" style="width:100%;height:350px;"></div>
+	<div class="container">
+	
+	<div id="map" style="width:100%;height:350px;" style = "align:center"></div>
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=080bb423a201009ee4d15968e7e76bd2"></script>
 	<script>
 	var lat = ${deal.lat}
@@ -31,47 +33,34 @@
 	});
 	// 마커가 지도 위에 표시되도록 설정합니다
 	marker.setMap(map);
-	
-	// 아래 코드는 지도 위의 마커를 제거하는 코드입니다
-	// marker.setMap(null);    
 	</script>
 		<br>
-		<div class="container" align="center">
-			<div class="col-lg-6" align="center">
-					<input type="hidden" name="act" value="login"> <br>
-					<div class="form-group" align="center">
-						<label for=""><strong>거래번호 : </strong> ${deal.no}</label>
-					</div>
-					<div class="form-group" align="center">
-						<label for=""><strong>동 : </strong> ${deal.dong}</label>
-					</div>
-					<div class="form-group" align="center">
-						<label for=""><strong>아파트 이름 : </strong> ${deal.aptName}</label>
-					</div>
-					<div class="form-group" align="center">
-						<label for=""><strong>거래액 : </strong>${deal.dealAmount}</label>
-					</div>
-					<div class="form-group" align="center">
-						<label for=""><strong>거래일자 : </strong>${deal.dealYear}-${deal.dealMonth}-${deal.dealDay}</label>
-					</div>
-					<div class="form-group" align="center">
-						<label for=""><strong>건축년도 : </strong>${deal.buildYear} </label>
-					</div>
-					<div class="form-group" align="center">
-						<label for=""><strong>면적 : </strong>${deal.area} </label>
-					</div>
-					<div class="form-group" align="center">
-						<label for=""><strong>층 : </strong>${deal.floor} </label>
-					</div>
-					<div class="form-group" align="center">
-						<label for=""><strong>지번 : </strong>${deal.jibun} </label>
-					</div>
-					<div class="form-group" align="center">
-					<button onclick="document.location.href='${root}/pagemv?key=aptname&word=${deal.aptName}&reqPageNo=${reqPageNo}'">뒤로가기</button>
-					</div>
-			</div>
-		</div>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<table id="tablesort" class="table table-active" style = "text-align:center">
+			<tbody>
+				<tr><td><strong>거래번호 </strong> </td>
+				<td>${deal.no}</td></tr>
+				<tr><td><strong>동 </strong> </td>
+				<td>${deal.dong}</td></tr>
+				<tr><td><strong>아파트 이름 </strong> </td>
+				<td>${deal.aptName}</td></tr>
+				<tr><td><strong>거래액</strong> </td>
+				<td>${deal.dealAmount}</td></tr>
+				<tr><td><strong>거래일자</strong> </td>
+				<td>${deal.dealYear}-${deal.dealMonth}-${deal.dealDay}</td></tr>
+				<tr><td><strong>건축년도</strong> </td>
+				<td>${deal.buildYear}</td></tr>
+				<tr><td><strong>면적</strong> </td>
+				<td>${deal.area}</td></tr>
+				<tr><td><strong>층</strong> </td>
+				<td>${deal.floor}</td></tr>
+				<tr><td><strong>지번</strong></td>
+				<td>${deal.jibun}</td></tr>
+				<tr>
+				<td colspan="2" style="align:center"><button onclick="document.location.href='${root}/pagemv?key=aptname&word=${deal.aptName}&reqPageNo=${reqPageNo}'">뒤로가기</button></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 		<%@ include file="../style/footer.jsp"%>
 </body>
 </html>

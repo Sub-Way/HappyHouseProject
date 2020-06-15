@@ -38,7 +38,7 @@
 		<section id="index_section">
 				<div class="card-body" style="float: center;">
 					<form id="searchform" method="get" class="form-inline" action="${root}/search">
-						<table class="table table-borderless">
+						<table class="table table-borderless" >
 							<tr>
 								<td align="center">
 								<button type="button" class="btn btn-dark" onclick="javascript:send(searchform);">전체 조회</button> 
