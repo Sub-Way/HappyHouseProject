@@ -32,7 +32,7 @@
 				</div>
 				</div>
 				<div class="form-group" align="center">
-					<c:if test="${userinfo != null}">
+					<c:if test="${userinfo.id eq 'ssafy'}">
 						<a href="${root}/rewrite?no=${list.no}">게시글 수정</a>
 						<a href="${root}/remove?no=${list.no}">게시글 삭제</a>
 					</c:if>
