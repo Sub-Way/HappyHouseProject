@@ -69,6 +69,6 @@ public class HouseDealServiceImpl implements HouseDealService{
 	@Override
 	public void hitDong(HouseDeal dto) {
 		// TODO Auto-generated method stub
-		
+		dao.hits(dto);
 	}
 }

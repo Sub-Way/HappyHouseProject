@@ -5,7 +5,7 @@
 	
 	<!-- 상세보기 -->
 	<select id="show" resultType="com.ssafy.happyhouse.model.dto.HouseDeal">
-		select no,dong,AptName,code,dealAmount,buildYear,dealYear,dealMonth,dealDay,area,floor,jibun,lat,lng
+		select *
 		from housedeal_lat_lng
 		where no like #{no}
 	</select>
@@ -13,35 +13,35 @@
 	<!-- 아파트 전체 개수  -->
 	<select id="TotalCnt" resultType="int">
 		select count(no) cnt
-		 from housedeal
+		 from housedeal_lat_lng
 	</select>
 
 	<!-- 아파트 검색 개수  -->
 	<select id="AptTotalCnt" resultType="int">
 		select count(*)
-		from housedeal
+		from housedeal_lat_lng
 		where AptName like #{word}
 	</select>
 	
 	<!-- 동 검색 개수  -->
 	<select id="DongTotalCnt" resultType="int">
 		select count(*)
-		from housedeal
+		from housedeal_lat_lng
 		where dong like #{word}
 	</select>
 	
 	<!-- 아파트 전체 조회 -->
 	<select id="selectAllPage" resultType="com.ssafy.happyhouse.model.dto.HouseDeal">
-		select no,dong,AptName,code,dealAmount,buildYear,dealYear,dealMonth,dealDay,area,floor,jibun
-		from housedeal
+		select *
+		from housedeal_lat_lng
 		order by no asc
 		Limit #{startNo}, 10
 	</select>
 	
 	<!-- 아파트 이름 검색 -->
 	<select id="selectAptpage" resultType="com.ssafy.happyhouse.model.dto.HouseDeal">
-		select no,dong,AptName,code,dealAmount,buildYear,dealYear,dealMonth,dealDay,area,floor,jibun
-		from housedeal
+		select *
+		from housedeal_lat_lng
 		where AptName like #{word}
 		order by no asc
 		Limit #{startNo}, 10
@@ -49,8 +49,8 @@
 	
 	<!-- 동 이름 검색 -->
 	<select id="selectDongPage" resultType="com.ssafy.happyhouse.model.dto.HouseDeal">
-		select no,dong,AptName,code,dealAmount,buildYear,dealYear,dealMonth,dealDay,area,floor,jibun
-		from housedeal
+		select *
+		from housedeal_lat_lng
 		where dong like #{word}
 		order by no asc
 		Limit #{startNo}, 10
@@ -58,7 +58,7 @@
 	
 	<!-- 게시글 조회수 업데이트 -->
     <update id="hits">
-   	   update ssafydb.housedeal
+   	   update housedeal_lat_lng
        set hit = #{hit}
        where no=#{no}
     </update>

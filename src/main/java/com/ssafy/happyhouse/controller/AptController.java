@@ -21,6 +21,11 @@ public class AptController {
 		@Autowired
 		HouseDealService service;
 	
+		@RequestMapping(value = "/", method = RequestMethod.GET)
+		public String moveMainmain() {
+			System.out.println("실행");
+			return "index"; 
+		}
 		
 		@RequestMapping(value = "/search", method = RequestMethod.GET)
 		public String moveList(@ModelAttribute PageDTO page, Model model) throws Exception {
@@ -65,6 +70,7 @@ public class AptController {
 			
 			return "apt/search";
 		}
+		
 		@RequestMapping(value = "/pagemv", method = RequestMethod.GET)
 		public String pagemv(String key, String word, String reqPageNo, Model model) throws Exception {
 			System.out.println("search controller 도착 : "+key+" "+word+" "+reqPageNo);
@@ -112,11 +118,6 @@ public class AptController {
 			return "apt/search";
 		}
 
-		@RequestMapping(value = "/test", method = RequestMethod.GET)
-		public String moveMainmain() {
-			System.out.println("실행");
-			return "index"; 
-		}
 		
 		@RequestMapping(value = "/list", method = RequestMethod.GET)
 		public String list(Model model) throws Exception {
@@ -124,11 +125,18 @@ public class AptController {
 		}
 		
 		@RequestMapping(value = "/showDetail", method = RequestMethod.GET)
-		public String detail(Model model, @RequestParam int no) throws Exception {
+		public String detail(Model model, @RequestParam int no, @RequestParam int reqPageNo) throws Exception {
 			HouseDeal detail = service.show(no);
-			model.addAttribute("detail", detail);
-			return "apt/search";
+			detail.setHit(detail.getHit()+1);
+			System.out.println("조회수 확인: "+ detail.getHit());
+			service.hitDong(detail);
+			
+			model.addAttribute("deal", detail);
+			model.addAttribute("reqPageNo", reqPageNo);
+			return "apt/showApt";
 		}
+		
+		
 		
 		@RequestMapping(value = "/error", method = RequestMethod.GET)
 		public String error() throws Exception {
