@@ -9,7 +9,7 @@ import com.ssafy.happyhouse.model.dto.PageDTO;
 @Service
 public interface HouseDealService {
 	
-public List<HouseDeal> searchAll(PageDTO pg) throws Exception;
+	public List<HouseDeal> searchAll(PageDTO pg) throws Exception;
 	
 	public List<HouseDeal> searchAptName(PageDTO pg) throws Exception;
 
@@ -17,9 +17,12 @@ public List<HouseDeal> searchAll(PageDTO pg) throws Exception;
 	
 	public HouseDeal show(int no) throws Exception;
 	
+	public HouseDeal location(String word) throws Exception; // 위치 추가
+	
 	public int TotalCnt() throws Exception;
 	
 	public int AptTotalCnt(String word) throws Exception;
 	
 	public int DongTotalCnt(String word) throws Exception;
+	
 }

@@ -6,7 +6,6 @@ import java.util.List;
 
 import com.ssafy.happyhouse.model.dto.HouseDeal;
 import com.ssafy.happyhouse.model.dto.PageDTO;
-
 //@Mapper
 public interface HouseDealDao {
 
@@ -17,6 +16,8 @@ public interface HouseDealDao {
 	public List<HouseDeal> searchDong(PageDTO pg) throws Exception;
 	
 	public HouseDeal show(int no) throws Exception;
+	
+	public HouseDeal location(String word) throws Exception; // 위치 추가
 	
 	public int TotalCnt() throws Exception;
 	

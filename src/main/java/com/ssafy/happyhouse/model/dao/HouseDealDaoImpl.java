@@ -62,4 +62,10 @@ public class HouseDealDaoImpl implements HouseDealDao{
 		HouseDeal tmp = sqlSession.selectOne("HouseDealMapper.show", no);
 		return tmp;
 	}
+
+	@Override
+	public HouseDeal location(String word) throws Exception {
+		HouseDeal tmp = sqlSession.selectOne("HouseDealMapper.location", word);
+		return tmp;
+	}
 }

@@ -59,8 +59,8 @@
 					<table id="tablesort" class="table table-active">
 						<tbody>
 							<tr>
-								<td onclick="document.location.href='/apt.do?act=show&no=${deal.no}&aptname=${deal.aptName}'" style="cursor: pointer;"><strong>${deal.no}</strong></td>
-								<td colspan="3">${deal.aptName}</td>
+								<td ><strong>${deal.no}</strong></td>
+								<td colspan="3" onclick="document.location.href='/showDetail?no=${deal.no}'" style="cursor: pointer;">${deal.aptName}</td>
 							</tr>
 							<tr class="table-info">
 								<td colspan="1">${deal.dong}</td>

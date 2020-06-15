@@ -66,4 +66,12 @@ public class HouseDealServiceImpl implements HouseDealService{
 		return tmp;
 	}
 
+	@Override
+	public HouseDeal location(String word) throws Exception {
+		word = "%"+word+"%";
+		System.out.println(word);
+		HouseDeal tmp = dao.location(word);
+		return tmp;
+	}
+
 }
