@@ -62,4 +62,9 @@ public class HouseDealDaoImpl implements HouseDealDao{
 		HouseDeal tmp = sqlSession.selectOne("HouseDealMapper.show", no);
 		return tmp;
 	}
+
+	@Override
+	public void hits(HouseDeal dto) {
+		sqlSession.update("HouseDealMapper.hits", dto);
+	}
 }

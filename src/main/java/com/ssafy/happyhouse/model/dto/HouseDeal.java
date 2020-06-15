@@ -44,6 +44,15 @@ public class HouseDeal implements Serializable, Comparable<HouseDeal> {
 	private String rentMoney;
 	
 	private String img;
+	private int hit;
+	
+	public int getHit() {
+		return hit;
+	}
+	public void setHit(int hit) {
+		this.hit = hit;
+	}
+	
 	public HouseDeal() {	}
 	public HouseDeal(int no) {
 		super();

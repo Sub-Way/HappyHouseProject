@@ -126,14 +126,8 @@ public class AptController {
 		@RequestMapping(value = "/showDetail", method = RequestMethod.GET)
 		public String detail(Model model, @RequestParam int no) throws Exception {
 			HouseDeal detail = service.show(no);
-			
-//			HouseDeal locationTmp = service.location(detail.getAptName());
-//			if(locationTmp.getLng() != null && locationTmp.getLat() != null) {
-//				detail.setLat(locationTmp.getLat());
-//				detail.setLng(locationTmp.getLng());
-//			}
-			model.addAttribute("deal", detail);
-			return "apt/showApt";
+			model.addAttribute("detail", detail);
+			return "apt/search";
 		}
 		
 		@RequestMapping(value = "/error", method = RequestMethod.GET)

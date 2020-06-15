@@ -18,13 +18,13 @@
 			alert("비밀번호 입력!!!");
 			return;
 		} else {
-			document.getElementById("loginform").action = "/home";
+			document.getElementById("loginform").action = "${root}/home";
 			document.getElementById("loginform").submit();
 		}
 	}
 
 	function findpwd() {
-		document.location.href = "/findpwd";
+		document.location.href = "${root}/findpwd";
 	}
 </script>
 </head>

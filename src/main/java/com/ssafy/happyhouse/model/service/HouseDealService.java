@@ -23,4 +23,6 @@ public interface HouseDealService {
 	
 	public int DongTotalCnt(String word) throws Exception;
 	
+	public void hitDong(HouseDeal dto); //조회수 업데이트
+
 }

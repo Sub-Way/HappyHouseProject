@@ -17,7 +17,7 @@
 			alert("내용 입력!!!!");
 			return;
 		} else {
-			document.getElementById("writeform").action = "/rewritesuccess";
+			document.getElementById("writeform").action = "${root}/rewritesuccess";
 			document.getElementById("writeform").submit();
 		}
 	}

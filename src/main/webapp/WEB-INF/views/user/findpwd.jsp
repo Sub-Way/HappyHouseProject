@@ -26,7 +26,7 @@ $(document).ready(function() {
 			alert("비밀번호 확인!!!");
 			return;
 		} else {
-			document.getElementById("memberform").action = "/findsuccess";
+			document.getElementById("memberform").action = "${root}/findsuccess";
 	        document.getElementById("memberform").submit();
 		}
 	});

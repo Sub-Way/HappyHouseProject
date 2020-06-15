@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="QnAMapper">
+	
+	<!-- QnA 게시글 전체 조회 -->
+	<select id="selectQnA" resultType="com.ssafy.happyhouse.model.dto.QnA">
+		select qna_no as qnaNo,
+		       qna_title as qnaTitle,
+		       qna_content as qnaContent,
+		       qna_userid as qnaUserid,
+		       qna_datetime as qnaDatetime,
+		       reply_content as replyContent,
+		       reply_datetime as replyDatetime,	
+		       reply_userid as replyUserid
+		  from qna_board 
+		 order by qna_no asc
+	</select>
+	
+	<!-- QnA 게시글 등록 -->
+	<insert id="insertQnA" parameterType="com.ssafy.happyhouse.model.dto.QnA">
+		insert into qna_board(
+			qna_userid, qna_title, qna_content
+		) values (
+			#{qnaUserid}, #{qnaTitle}, #{qnaContent}
+		)
+	</insert>
+	
+	<!-- QnA 게시글 상세 조회 -->
+	<select id="selectQnAByNo" resultType="com.ssafy.happyhouse.model.dto.QnA">
+		select qna_no as qnaNo, 
+				qna_title as qnaTitle, 
+				qna_content as qnaContent, 
+				qna_userid as qnaUserid, 
+				qna_datetime as qnaDatetime,
+				reply_userid as replyUserid,
+				reply_content as replyContent
+		from qna_board  
+		where qna_no = #{qnaNo}
+	</select>
+
+	<!-- QnA 질문 수정 -->
+	<update id="updateQnA" parameterType="com.ssafy.happyhouse.model.dto.QnA">
+		update qna_board
+		set
+			qna_userid = #{qnaUserid},
+			qna_title = #{qnaTitle},
+			qna_content = #{qnaContent},
+			qna_datetime =  now()
+		where qna_no = #{qnaNo}
+	</update>
+
+	<!-- QnA 게시글 삭제 -->
+	<delete id="deleteQnA" parameterType="int">
+		delete 
+		  from qna_board 
+		 where qna_no = #{qnaNo}
+	</delete>
+	
+	<!-- QnA 답변 등록 및 수정 -->
+	<update id="replyQnA" parameterType="com.ssafy.happyhouse.model.dto.QnA">
+		update qna_board
+		set
+			reply_userid = #{replyUserid},
+			reply_content = #{replyContent},
+			reply_datetime =  now()
+		where qna_no = #{qnaNo}
+	</update>
+	
+</mapper>

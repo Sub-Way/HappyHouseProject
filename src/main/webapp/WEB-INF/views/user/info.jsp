@@ -32,8 +32,8 @@
 			</div>
 			</div>
 			<div class="form-group" align="center">
-				<a href="/modify">회원정보수정</a>
-				<a href="/delete">회원탈퇴</a>
+				<a href="${root}/modify">회원정보수정</a>
+				<a href="${root}/delete">회원탈퇴</a>
 			</div>
 		</form>
 	</div>
