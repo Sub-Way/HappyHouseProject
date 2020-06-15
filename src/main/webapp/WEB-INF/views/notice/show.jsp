@@ -33,10 +33,10 @@
 				</div>
 				<div class="form-group" align="center">
 					<c:if test="${userinfo != null}">
-						<a href="./rewrite?no=${list.no}">게시글 수정</a>
-						<a href="./remove?no=${list.no}">게시글 삭제</a>
+						<a href="${root}/rewrite?no=${list.no}">게시글 수정</a>
+						<a href="${root}/remove?no=${list.no}">게시글 삭제</a>
 					</c:if>
-					<a href="./notice">목록으로</a>
+					<a href="${root}/notice">목록으로</a>
 				</div>
 			</form>
 		</div>

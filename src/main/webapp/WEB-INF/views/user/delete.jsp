@@ -12,7 +12,7 @@
 <script>
 $(document).ready(function(){
 	$("#join_btn").click(function() {
-			document.getElementById("loginform").action = "/deletesuccess";
+			document.getElementById("loginform").action = "${root}/deletesuccess";
 		    document.getElementById("loginform").submit();
 	  	});//click
 });//ready

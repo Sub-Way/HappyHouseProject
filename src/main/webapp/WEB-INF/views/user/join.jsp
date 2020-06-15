@@ -133,7 +133,7 @@ $(document).ready(function(){
 			return;
 		}
 		else {
-			document.getElementById("join_form").action = "/joinsuccess";
+			document.getElementById("join_form").action = "${root}/joinsuccess";
 		    document.getElementById("join_form").submit();
 	      }
 	});//click

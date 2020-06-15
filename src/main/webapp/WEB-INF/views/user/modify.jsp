@@ -101,7 +101,7 @@ $(document).ready(function(){
 			return;
 		}
 		else {
-			document.getElementById("memberform").action = "/modifysuccess";
+			document.getElementById("memberform").action = "${root}/modifysuccess";
 	        document.getElementById("memberform").submit();
 	        console.log("20");
 	      }

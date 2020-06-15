@@ -66,4 +66,9 @@ public class HouseDealServiceImpl implements HouseDealService{
 		return tmp;
 	}
 
+	@Override
+	public void hitDong(HouseDeal dto) {
+		// TODO Auto-generated method stub
+		
+	}
 }

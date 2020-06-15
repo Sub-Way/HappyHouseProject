@@ -10,30 +10,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="/assets/img/ico/favicon.ico">
-    <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/ico/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/ico/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/ico/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" href="/assets/img/ico/apple-touch-icon-57x57.png">
+    <link rel="shortcut icon" href="${root}/assets/img/ico/favicon.ico">
+    <link rel="apple-touch-icon" sizes="144x144" href="${root}/assets/img/ico/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="${root}/assets/img/ico/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="${root}/assets/img/ico/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" href="${root}/assets/img/ico/apple-touch-icon-57x57.png">
     
     <!-- Bootstrap Core CSS -->
-    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/assets/css/animate.css" rel="stylesheet">
-    <link href="/assets/css/plugins.css" rel="stylesheet">
+    <link href="${root}/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${root}/assets/css/animate.css" rel="stylesheet">
+    <link href="${root}/assets/css/plugins.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="/assets/css/style.css" rel="stylesheet">
+    <link href="${root}/assets/css/style.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="/assets/css/pe-icons.css" rel="stylesheet">
+    <link href="${root}/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="${root}/assets/css/pe-icons.css" rel="stylesheet">
     
 </head>
 <body>
     <div class="master-wrapper">
         <div class="preloader">
             <div class="preloader-img">
-                <span class="loading-animation animate-flicker"><img src="/assets/img/loading.GIF" alt="loading"/></span>
+                <span class="loading-animation animate-flicker"><img src="${root}/assets/img/loading.GIF" alt="loading"/></span>
             </div>
         </div>
 
@@ -72,24 +72,24 @@
                 <c:if test="${userinfo == null}">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
-                             <a href="/main">홈</a>
+                             <a href="${root}/main">홈</a>
                         </li>
                        <li class="dropdown">
-                             <a href="/login">로그인</a>
+                             <a href="${root}/login">로그인</a>
                         </li>
                          <li class="dropdown">
-                            <a href="/join">회원가입</a>
+                            <a href="${root}/join">회원가입</a>
                         </li>
                         <li class="dropdown">
-                            <a href="/list">거래검색</a>
+                            <a href="${root}/list">거래검색</a>
                         </li>
                         <li class="dropdown">
-                        	<a href="/notice">공지사항</a>
+                        	<a href="${root}/notice">공지사항</a>
                         </li>
                         <li class="dropdown">
-                        	<a href="/sitemap">사이트맵</a>
+                        	<a href="${root}/sitemap">사이트맵</a>
                        <li class="dropdown">
-                       		<a href="/login" style="float:right">로그인을 해주세요!</a>
+                       		<a href="${root}/login" style="float:right">로그인을 해주세요!</a>
                         </li>
                         <li><a href="javascript:void(0);" class="side-menu-trigger hidden-xs"><i class="fa fa-bars"></i></a></li>
                     </ul>
@@ -97,24 +97,24 @@
                     <c:if test="${userinfo != null}">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
-                             <a href="/main">홈</a>
+                             <a href="${root}/main">홈</a>
                         </li>
                        	<li class="dropdown">
-                             <a href="/logout">로그아웃</a>
+                             <a href="${root}/logout">로그아웃</a>
                         </li>
                          <li class="dropdown">
-                            <a href="/info">회원정보</a>
+                            <a href="${root}/info">회원정보</a>
                         </li>
                         <li class="dropdown">
-                            <a href="/list">거래검색</a>
+                            <a href="${root}/list">거래검색</a>
                         </li>
                         <li class="dropdown">
-                        	<a href="/notice">공지사항</a>
+                        	<a href="${root}/notice">공지사항</a>
                         </li>
                         <li class="dropdown">
-                        	<a href="/sitemap">사이트맵</a>
+                        	<a href="${root}/sitemap">사이트맵</a>
                        <li class="dropdown">
-                       		<a href="/info" style="float:right" >${userinfo.id}(${userinfo.name})님 환영합니다!</a>
+                       		<a href="${root}/info" style="float:right" >${userinfo.id}(${userinfo.name})님 환영합니다!</a>
                         </li>
                         <li><a href="javascript:void(0);" class="side-menu-trigger hidden-xs"><i class="fa fa-bars"></i></a></li>
                     </ul>
@@ -215,11 +215,11 @@
         </div>
     </div>
 
-    <script src="/assets/js/jquery.js"></script>
-    <script src="/assets/js/bootstrap.min.js"></script>
-    <script src="/assets/js/plugins.js"></script>
+    <script src="${root}/assets/js/jquery.js"></script>
+    <script src="${root}/assets/js/bootstrap.min.js"></script>
+    <script src="${root}/assets/js/plugins.js"></script>
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    <script src="/assets/js/init.js"></script>
+    <script src="${root}/assets/js/init.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -232,9 +232,9 @@
     $(document).ready(function() {
         'use strict';
         jQuery('#headerwrap').backstretch([
-            "/assets/img/bg/bg1.jpg",
-            "/assets/img/bg/bg2.jpg",
-            "/assets/img/bg/bg3.jpg"
+            "${root}/assets/img/bg/bg1.jpg",
+            "${root}/assets/img/bg/bg2.jpg",
+            "${root}/assets/img/bg/bg3.jpg"
         ], {
             duration: 8000,
             fade: 500

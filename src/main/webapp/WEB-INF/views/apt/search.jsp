@@ -10,7 +10,7 @@
 <%@ include file="../style/page.jsp"%>
     <script type="text/javascript">
 	function searchAll() {
-		document.location.href = "/searchAll";
+		document.location.href = "${root}/searchAll";
 	}
 	
 	function send(searchform){
