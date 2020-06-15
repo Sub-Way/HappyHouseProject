@@ -6,7 +6,6 @@ import java.util.List;
 
 import com.ssafy.happyhouse.model.dto.HouseDeal;
 import com.ssafy.happyhouse.model.dto.PageDTO;
-
 //@Mapper
 public interface HouseDealDao {
 
