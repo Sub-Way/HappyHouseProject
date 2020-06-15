@@ -60,15 +60,15 @@
 						<tbody>
 							<tr>
 								<td ><strong>${deal.no}</strong></td>
-								<td colspan="3" onclick="document.location.href='${root}/showDetail?no=${deal.no}'" style="cursor: pointer;">${deal.aptName}</td>
+								<td colspan="4" onclick="document.location.href='${root}/showDetail?no=${deal.no}&reqPageNo=${pagedto.reqPageNo}'" style="cursor: pointer;"><strong>${deal.aptName}</strong></td>
 							</tr>
 							<tr class="table-info">
 								<td colspan="1">${deal.dong}</td>
-								<td colspan="2"><strong>거래액 :
+								<td colspan="2"> 거래액 :
 										${deal.dealAmount} 거래일자 :
-										${deal.dealYear}-${deal.dealMonth}-${deal.dealDay}</strong></td>
-								<td colspan="1">건축년도 : ${deal.buildYear} 면적 : ${deal.area} 층 :
-									${deal.floor} 지번 : ${deal.jibun}</td>
+										${deal.dealYear}-${deal.dealMonth}-${deal.dealDay}</td>
+								<td colspan="1">건축년도 : ${deal.buildYear} 면적 : ${deal.area} 층 : ${deal.floor} 지번 : ${deal.jibun}</td>
+								<td colspan="1"> 조회수 : ${deal.hit} </td>
 							</tr>
 						</tbody>
 					</table>
@@ -76,11 +76,11 @@
 			<table class="table table-borderless">
 				<tr>
 					<td align="center">
-							<a href="/pagemv?key=${pagedto.key }&word=${pagedto.word }&reqPageNo=${pagedto.reqPageNo-1}">◀이전</a>
+							<a href="${root}/pagemv?key=${pagedto.key }&word=${pagedto.word }&reqPageNo=${pagedto.reqPageNo-1}">◀이전</a>
 						<c:forEach var="pageNo" begin="${startPage }" end="${lastPage}" step="1" >
-							<a href="/pagemv?key=${pagedto.key }&word=${pagedto.word }&reqPageNo=${pageNo }">${pageNo}</a>
+							<a href="${root}/pagemv?key=${pagedto.key }&word=${pagedto.word }&reqPageNo=${pageNo }">${pageNo}</a>
 						</c:forEach>
-							<a href="/pagemv?key=${pagedto.key }&word=${pagedto.word }&reqPageNo=${pagedto.reqPageNo+1}">다음▶</a>
+							<a href="${root}/pagemv?key=${pagedto.key }&word=${pagedto.word }&reqPageNo=${pagedto.reqPageNo+1}">다음▶</a>
 					</td>
 				</tr>
 			</table>

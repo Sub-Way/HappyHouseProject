@@ -39,35 +39,39 @@
 		<div class="container" align="center">
 			<div class="col-lg-6" align="center">
 					<input type="hidden" name="act" value="login"> <br>
-					<div class="form-group" align="left">
+					<div class="form-group" align="center">
 						<label for=""><strong>거래번호 : </strong> ${deal.no}</label>
 					</div>
-					<div class="form-group" align="left">
+					<div class="form-group" align="center">
 						<label for=""><strong>동 : </strong> ${deal.dong}</label>
 					</div>
-					<div class="form-group" align="left">
+					<div class="form-group" align="center">
 						<label for=""><strong>아파트 이름 : </strong> ${deal.aptName}</label>
 					</div>
-					<div class="form-group" align="left">
+					<div class="form-group" align="center">
 						<label for=""><strong>거래액 : </strong>${deal.dealAmount}</label>
 					</div>
-					<div class="form-group" align="left">
+					<div class="form-group" align="center">
 						<label for=""><strong>거래일자 : </strong>${deal.dealYear}-${deal.dealMonth}-${deal.dealDay}</label>
 					</div>
-					<div class="form-group" align="left">
+					<div class="form-group" align="center">
 						<label for=""><strong>건축년도 : </strong>${deal.buildYear} </label>
 					</div>
-					<div class="form-group" align="left">
+					<div class="form-group" align="center">
 						<label for=""><strong>면적 : </strong>${deal.area} </label>
 					</div>
-					<div class="form-group" align="left">
+					<div class="form-group" align="center">
 						<label for=""><strong>층 : </strong>${deal.floor} </label>
 					</div>
-					<div class="form-group" align="left">
+					<div class="form-group" align="center">
 						<label for=""><strong>지번 : </strong>${deal.jibun} </label>
+					</div>
+					<div class="form-group" align="center">
+					<button onclick="document.location.href='${root}/pagemv?key=aptname&word=${deal.aptName}&reqPageNo=${reqPageNo}'">뒤로가기</button>
 					</div>
 			</div>
 		</div>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		<%@ include file="../style/footer.jsp"%>
 </body>
 </html>
