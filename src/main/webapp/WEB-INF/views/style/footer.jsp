@@ -23,45 +23,34 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="widget">
-                                    <h4 class="widget-title"><strong>인기있는 매물</strong></h4>
+                                    <h4 class="widget-title"><strong>인기많은 매물</strong></h4>
                                     <div>
-										<div class="media">
+										<c:if test="${topapt.size() != 0}">
+											<c:forEach var="apt" items="${topapt}">
+											<div class="media">
 					                        <div class="pull-left">
-					                             <img class="widget-img" src="img/건양하늘터.jpg" alt="" style="width: 60px;" height="60px;">
+					                             <img class="widget-img" src="img/${apt.aptName}.jpg" onerror="this.src='img/no_imagel.jpg'" alt="" style="width: 60px;" height="60px;">
 					                        </div>
 					                        <div class="media-body">
-					                             <span class="media-heading"><a href="#">건양하늘터</a></span>
-					                             <small class="muted">건축년도: 2006 </small>
+					                              <span class="media-heading"><a href="${root}/showDetail?no=${apt.no}&reqPageNo=0">${apt.aptName}</a></span>
+					                              <small class="muted">거래번호: ${apt.no} </small>
+					                              <small class="muted">건축년도: ${apt.buildYear} </small>
 					                        </div>
 				                        </div>
-				                        <div class="media">
-				                            <div class="pull-left">
-				                                <img class="widget-img" src="img/광화문풍림스페이스본.jpg" alt="" style="width: 60px;" height="60px;">
-				                            </div>
-				                            <div class="media-body">
-				                                <span class="media-heading"><a href="#">광화문풍림스페이스본</a></span>
-				                                <small class="muted">건축년도: 2008 </small>
-				                            </div>
-				                        </div>
+											</c:forEach>
+										</c:if>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="widget">
-                                    <h4 class="widget-title">Popular Tags</h4>
+                                    <h4 class="widget-title">인기많은 동네</h4>
                                     <div class="tagcloud">
-                                       	<a href="/pagemv?key=dongname&word=사직동&reqPageNo=0" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">사직동</a>
-				                        <a href="/pagemv?key=dongname&word=숭인동&reqPageNo=0" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">숭인동</a>
-				                        <a href="/pagemv?key=dongname&word=창신동&reqPageNo=0" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">창신동</a>
-				                        <a href="/pagemv?key=dongname&word=평동&reqPageNo=0" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">평동</a>
-				                        <a href="/pagemv?key=dongname&word=홍파동&reqPageNo=0" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">홍파동</a>
-				                        <a href="/pagemv?key=dongname&word=견지동&reqPageNo=0" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">견지동</a>
-				                        <a href="/pagemv?key=dongname&word=인의동&reqPageNo=0" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">인의동</a>
-				                        <a href="/pagemv?key=dongname&word=명륜1가&reqPageNo=0" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">명륜1가</a>
-				                        <a href="/pagemv?key=dongname&word=명륜2가&reqPageNo=0" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">명륜2가</a>
-				                        <a href="/pagemv?key=dongname&word=무악동&reqPageNo=0" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">무악동</a>
-				                        <a href="/pagemv?key=dongname&word=옥인동&reqPageNo=0" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">옥인동</a>
-				                        <a href="/pagemv?key=dongname&word=신영동&reqPageNo=0" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">신영동</a>
+                                       	<c:if test="${topdong.size() != 0}">
+											<c:forEach var="dong" items="${topdong}">
+												<a href="${root}/pagemv?key=dongname&word=${dong.dong }&reqPageNo=0" class="tag-link btn btn-theme btn-xs" title="3 topics">${dong.dong}</a>
+											</c:forEach>
+										</c:if>
                                     </div>
                                 </div>
                             </div>

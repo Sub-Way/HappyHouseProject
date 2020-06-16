@@ -56,7 +56,7 @@
 				<tr><td><strong>지번</strong></td>
 				<td>${deal.jibun}</td></tr>
 				<tr>
-				<td colspan="2" style="align:center"><button onclick="document.location.href='${root}/pagemv?key=aptname&word=${deal.aptName}&reqPageNo=${reqPageNo}'">뒤로가기</button></td>
+				<td colspan="2" style="align:center"><button onclick="document.location.href='${root}/pagemv?key=aptname&word=${deal.aptName}&reqPageNo=${reqPageNo}'">목록</button></td>
 				</tr>
 			</tbody>
 		</table>
