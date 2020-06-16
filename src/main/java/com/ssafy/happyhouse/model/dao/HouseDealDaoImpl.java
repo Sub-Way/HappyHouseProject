@@ -67,4 +67,15 @@ public class HouseDealDaoImpl implements HouseDealDao{
 	public void hits(HouseDeal dto) {
 		sqlSession.update("HouseDealMapper.hits", dto);
 	}
+
+	@Override
+	public List<HouseDeal> topApt() {
+		return sqlSession.selectList("HouseDealMapper.topApt");
+	}
+
+	@Override
+	public List<HouseDeal> topDong() {
+		// TODO Auto-generated method stub
+		return sqlSession.selectList("HouseDealMapper.topDong");
+	}
 }

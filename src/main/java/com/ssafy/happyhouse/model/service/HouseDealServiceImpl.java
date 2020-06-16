@@ -71,4 +71,14 @@ public class HouseDealServiceImpl implements HouseDealService{
 		// TODO Auto-generated method stub
 		dao.hits(dto);
 	}
+
+	@Override
+	public List<HouseDeal> topApt() {
+		return dao.topApt();
+	}
+
+	@Override
+	public List<HouseDeal> topDong() {
+		return dao.topDong();
+	}
 }

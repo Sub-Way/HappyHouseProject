@@ -21,9 +21,14 @@ public class AptController {
 		@Autowired
 		HouseDealService service;
 	
+		@Autowired
+		HouseDealService hservice;
+		
 		@RequestMapping(value = "/", method = RequestMethod.GET)
-		public String moveMainmain() {
+		public String moveMainmain(Model model) {
 			System.out.println("실행");
+			model.addAttribute("topdong", hservice.topDong());
+			model.addAttribute("topapt", hservice.topApt());
 			return "index"; 
 		}
 		
@@ -68,6 +73,8 @@ public class AptController {
 			}
 			model.addAttribute("pagedto", page);
 			
+			model.addAttribute("topdong", hservice.topDong());
+			model.addAttribute("topapt", hservice.topApt());
 			return "apt/search";
 		}
 		
@@ -114,13 +121,16 @@ public class AptController {
 				page.setWord(tmp);
 			}
 			model.addAttribute("pagedto", page);
-			
+			model.addAttribute("topdong", hservice.topDong());
+			model.addAttribute("topapt", hservice.topApt());
 			return "apt/search";
 		}
 
 		
 		@RequestMapping(value = "/list", method = RequestMethod.GET)
 		public String list(Model model) throws Exception {
+			model.addAttribute("topdong", hservice.topDong());
+			model.addAttribute("topapt", hservice.topApt());
 			return "apt/search";
 		}
 		
@@ -133,6 +143,8 @@ public class AptController {
 			
 			model.addAttribute("deal", detail);
 			model.addAttribute("reqPageNo", reqPageNo);
+			model.addAttribute("topdong", hservice.topDong());
+			model.addAttribute("topapt", hservice.topApt());
 			return "apt/showApt";
 		}
 		
