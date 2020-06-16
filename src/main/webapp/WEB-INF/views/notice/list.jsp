@@ -28,7 +28,7 @@
 		<h2>공지목록</h2>
 		<p>공지사항 확인해주세요!!!!!</p>
 		<table class="table table-borderless">
-			<c:if test="${userinfo != null}">
+			<c:if test="${userinfo.id eq 'ssafy'}">
 				<tr>
 					<td align="right"><button type="button" class="btn btn-link"
 							onclick="javascript:movewrite();">글쓰기</button></td>
