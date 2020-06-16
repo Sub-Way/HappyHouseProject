@@ -48,7 +48,7 @@
                                     <div class="tagcloud">
                                        	<c:if test="${topdong.size() != 0}">
 											<c:forEach var="dong" items="${topdong}">
-												<a href="${root}/pagemv?key=dongname&word=${dong.dong }&reqPageNo=0" class="tag-link btn btn-theme btn-xs" title="3 topics">${dong.dong}</a>
+												<a href="${root}/pagemv?key=dongname&word=${dong.dong}&reqPageNo=0" class="tag-link btn btn-theme btn-xs" title="3 topics">${dong.dong}</a>
 											</c:forEach>
 										</c:if>
                                     </div>
