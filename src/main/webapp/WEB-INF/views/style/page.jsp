@@ -72,7 +72,7 @@
                 <c:if test="${userinfo == null}">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
-                             <a href="${root}/main">홈</a>
+                             <a href="${root}/">홈</a>
                         </li>
                        <li class="dropdown">
                              <a href="${root}/login">로그인</a>

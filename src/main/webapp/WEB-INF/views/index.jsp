@@ -6,7 +6,9 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-   <%@ include file="./style/home.jsp"%>
+   <%@ include file="./style/page.jsp"%>
+   <%@ include file="./style/footer.jsp"%>
+   <title>행복한 우리집</title>
 </head>
 <body>
 </body>
